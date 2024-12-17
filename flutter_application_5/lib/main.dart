@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -51,7 +53,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+              SizedBox(
                 height: 20,
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -118,7 +120,7 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w200, fontSize: 17),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 30,
                 child: const Row(
                   children: [
@@ -154,7 +156,7 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
 
@@ -162,15 +164,15 @@ class MyApp extends StatelessWidget {
                 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWg_b5e_-8gz8qBgbDY64agv6tPBPBvZQVw4Klb-dl4s8jx8JX',
                 width: double.infinity,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, right: 25),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25),
                 child: Text(
                   'Glenn Maxwell reverse swats a boundry <> Getty images',
                   style: TextStyle(fontWeight: FontWeight.w200, fontSize: 10),
                 ),
               ),
 
-              Row(
+              const Row(
                 children: [
                   Text(
                     'Austraila',

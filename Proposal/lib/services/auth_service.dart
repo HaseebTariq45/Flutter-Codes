@@ -2,8 +2,8 @@
 import '../models/user.dart';
 
 class AuthService {
-  static List<User> _users = []; // Store all registered users
-  User? _currentUser;            // Track the currently logged-in user
+  static final List<User> _users = []; // Store all registered users
+  User? _currentUser; // Track the currently logged-in user
 
   // Registration function
   bool register(String username, String password, String role) {

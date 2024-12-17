@@ -7,6 +7,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,6 +19,8 @@ class MyApp extends StatelessWidget {
 }
 
 class AuthScreen extends StatefulWidget {
+  const AuthScreen({super.key});
+
   @override
   _AuthScreenState createState() => _AuthScreenState();
 }
@@ -65,7 +69,7 @@ class _AuthScreenState extends State<AuthScreen> {
     return Scaffold(
       body: Container(
         // New Gradient Background (teal and cyan)
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.teal, Colors.cyan],
             begin: Alignment.topLeft,
@@ -84,16 +88,16 @@ class _AuthScreenState extends State<AuthScreen> {
                     'assets/banner.png',
                     height: 150,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     _isLoginMode ? 'Login' : 'Register',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   // Username Field
                   TextField(
                     controller: _usernameController,
@@ -106,7 +110,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   // Password Field
                   TextField(
                     controller: _passwordController,
@@ -120,7 +124,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     ),
                     obscureText: true,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   // Role Field (Only for Register)
                   if (!_isLoginMode)
                     TextField(
@@ -134,13 +138,13 @@ class _AuthScreenState extends State<AuthScreen> {
                         ),
                       ),
                     ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   // Submit Button (New Light Green Color)
                   ElevatedButton(
                     onPressed: _submit,
                     style: ElevatedButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -149,7 +153,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     ),
                     child: Text(
                       _isLoginMode ? 'Login' : 'Register',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
+                      style: const TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),
                   TextButton(
@@ -161,13 +165,13 @@ class _AuthScreenState extends State<AuthScreen> {
                     },
                     child: Text(
                       _isLoginMode ? 'Switch to Register' : 'Switch to Login',
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     _message,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ],
               ),
